@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">+
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+
+<form action="add.php" method="post" enctype="multipart/form-data" >
+    <!-- Параметр  enctype="multipart/form-data" обезательный иначе файл формой передаватся не будет
+     работает только с методом пост и значит что формой перед данные многими частями разных типов -->
+    <input type="text"  name="namme" placeholder="добавить модель"><br>
+    <input type="text" name="comment" placeholder="добавить коментарий"><br>
+    <input type="date" name="dv" placeholder="добавить дату выпуска"><br>
+    <input type="number" name="price" placeholder="добавить цену"><br>
+    выберите марку <br>
+    <select name="id_marca">
+
+       <option value='".$id_m."'></option>
+
+
+    </select><br>
+    выберите файл<br>
+    <input type="file" name="photo"><br>
+    <input type="submit" name="send" placeholder="добавить"><br>
+</form>
+</body>
+</html>
